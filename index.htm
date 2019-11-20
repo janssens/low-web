@@ -33,10 +33,10 @@
 			margin: auto;
 		}
 		header{
-			height: 110%;
+			min-height: 110%;
 		}
 		section{
-			height: 110%;
+			min-height: 110%;
 			padding-top: 220px;
 			position: relative;
 		}
@@ -56,10 +56,12 @@
 			text-align: center;
 			overflow: hidden;
 			line-height: 160px;
+			font-size: 15vw;
+			font-weight: bold;
 		}
 		#who:before{
 			background-color: #feca57;
-			content: 'Who is this ?';
+			content: 'Who ?';
 		}
 		#what:before{
 			background-color: #54a0ff;
@@ -72,6 +74,7 @@
 		#how:before{
 			background-color: #54a0ff;
 			content: 'How it works ?';
+			font-size: 11vw;
 		}
 		#contact:before{
 			background-color: #ff9ff3;
@@ -103,22 +106,68 @@
 			flex-direction: row;
 			justify-content: center;
 			flex-wrap: wrap;
-			margin: 5px 0 15px 0;
+			margin: 5px 0;
 		}
 		nav ul li{
+			font-family: arial;
 			padding: 0;
 			margin: 0 10px;
+			font-size: 15px;
+			padding: 0;
 		}
 		nav li a{
 			display: block;
-			padding: 3px;
+			padding: 0;
+			position: relative;
+			line-height: 20px;
+		}
+		nav li a::before, nav li  a::after {
+		    position: absolute;
+		    left: .9rem;
+		    right: .9rem;
+		    height: 2px;
+		    background: 
+		    #cccccc !important;
+		    content: '';
+		    opacity: 0;
+		    -webkit-transition: opacity 0.3s,-webkit-transform 0.3s;
+		    -moz-transition: opacity 0.3s,-moz-transform 0.3s;
+		    transition: opacity 0.3s,transform 0.3s;
+		}
+		nav li a::before {
+		    top: 0;
+		    -webkit-transform: translateY(-10px);
+		    -moz-transform: translateY(-10px);
+		    -ms-transform: translateY(-10px);
+			-o-transform: translateY(-10px);
+		    transform: translateY(-10px);
+		}
+		nav li a::after {
+		    bottom: 0;
+			-webkit-transform: translateY(10px);
+			-moz-transform: translateY(10px);
+			-ms-transform: translateY(10px);
+			-o-transform: translateY(10px);
+			transform: translateY(10px);
+		}
+		nav li a:hover::before, nav li a:hover::after {
+		    opacity: 1;
+		    -webkit-transform: translateY(0);
+		    -moz-transform: translateY(0);
+		    -ms-transform: translateY(0);
+		    -o-transform: translateY(0);
+		    transform: translateY(0);
 		}
 		nav li a:hover{
-			border-bottom: 1px solid #48dbfb;
+			/*border-bottom: 1px solid #48dbfb;*/
 		}
 		a{
 			text-decoration: none;
 			color: #48dbfb;
+			transition: color 0.3s;
+		}
+		a:hover{
+			color: white;
 		}
 		header > pre{
 			color: #1dd1a1;
@@ -179,7 +228,18 @@
 		#maltLogoPicto{
 			fill: #ff4967;
 		}
+		.line-list{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		.line-list li{
+			margin: 2px;
+		}
 		@media screen and (max-width: 508px) {
+			nav ul li{
+				font-size: 20px;
+			}
 			.ico{
 				top:-10vw;
 				margin-left: -10vw;
@@ -194,9 +254,10 @@
 			}
 			header > pre{
 				color: #1dd1a1;
-				width: 350px;
+				width: 280px;
 				margin: auto;
-				font-size: 9px;
+				font-size: 7px;
+				padding: 0.5vw;
 			}
 		  	section {
 			    padding-top: 250px;
@@ -204,6 +265,10 @@
 			h1 {
 			    position: absolute;
 			    font-size: 5vw;
+			    top: 108px;
+			}
+			.mt100{
+				margin-top: 150px;
 			}
 		}
 	</style>
@@ -249,17 +314,25 @@
 	<section id="what">
 		<h2>Nos services</h2>
 		<p>Réalisation de sites ultra leger, static, rapides, accessibles, ouverts et beau.</p>
+		<h2>Nos compétences</h2>
+		<ul class="line-list">
+			<li><a href="https://gohugo.io/">HUGO</a></li>
+			<li><a href="https://getgrav.org">GRAV</a></li>
+			<li><a href="https://www.raspberrypi.org/">RASPBERRY</a></li>
+			<li>PURE HTML</li>
+			<li>CSS3</li>
+		</ul>
 	</section>
 	<section id="why">
-		<h2>Pourquoi</h2>
-		<p>Prendre au sérieu l'hypothèse d'un <a href="https://www.youtube.com/watch?v=kLzNPEjHHb8">effondrement</a> de civilisation ce n'est pas se résigner mais s'y préparer. <br>
+		<h2>Pourquoi ? 🤔</h2>
+		<p>Prendre au sérieux l'hypothèse d'un <a href="https://www.youtube.com/watch?v=kLzNPEjHHb8">effondrement</a> de civilisation ce n'est pas se résigner mais s'y préparer. <br>
 			Quel informatique et quelle place pour les nouvelles technologie ? Quel rôle aura l'internet dans nos vies transformées ?
 		</p>
-		<p>Low-web vous propose d'imaginer ce web de demain, l'internet d'une nouvelle civilisation.</p>
+		<p><b>Low-web</b> vous propose d'imaginer ce web de demain, l'internet d'une nouvelle civilisation.</p>
 	</section>
 	<section id="how">
 		<h2>Nos outils</h2>
-		<p>Formés en permaculture depuis 2016, nous utilisons les principes de cette méthode de design pour concevoir des systèmes informatiques sobres et résilients, adaptés aux enjeux de notre siecle</p>
+		<p>Formés en permaculture depuis 2016, nous utilisons les principes de cette méthode de design pour concevoir des systèmes informatiques sobres et résilients, adaptés aux enjeux de notre siecle.</p>
 		<h2>Nos valeurs</h2>
 		<div class="tagcloud">
 			#ethique #neutralité #decroissance #resilience #écologie #sobriété #opensource #permaculture #lessismore
@@ -300,10 +373,11 @@
 	<polygon style="fill:#EA8EBC;" points="27.91,53.648 51.141,54.22 0,28.912 	"/>
 </g>
 </svg><span>Contactez nous par <b><i>email</i></b></span></a></li>
+<li><a href="tel:033651903667"><span>🤙</span><span>par <b>téléphone</b> au 06 51 90 36 67</span></a></li>
 		</ul>
 	</section>
 	<div class="center">
-			<small>Cette page de moins de 10ko, sans javascript, sans trackeur, sans cookie, sans image et sans aucune dépendance est hebergée sur une simple box internet, alimentée, le jour, par le <a href=" https://enlighten.enphaseenergy.com/public/systems/8SHh504368 ">🌞</a></small>
+			<small>Cette page de moins de 12ko, sans javascript, sans trackeur, sans cookie, sans image et sans aucune dépendance est hebergée sur une simple box internet, alimentée, le jour, par le <a href=" https://enlighten.enphaseenergy.com/public/systems/8SHh504368 ">🌞</a></small>
 	</div>
 	<nav>
 		<ul>
@@ -323,7 +397,7 @@
 				<a href="#how">Comment ?</a>
 			</li>
 			<li>
-				<a href="#contact">Contact</a>
+				<a href="#contact">Contact !</a>
 			</li>
 		</ul>
 	</nav>
