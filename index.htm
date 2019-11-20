@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 	<title>Low-web</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<style type="text/css">
 		/*https://flatuicolors.com/palette/ca*/
 		html,body{
@@ -15,10 +17,14 @@
 			color: #c8d6e5;
 		}
 		h1,h2{
-			font-family: "DejaVu Sans Mono", "Lucida Console", monospace;
+			/*font-family: "DejaVu Sans Mono", "Lucida Console", monospace;*/
+			font-family: arial;
 		}
 		p,div{
 			font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
+		}
+		*{
+			box-sizing: border-box;
 		}
 		section > *{
 			width: 100%;
@@ -27,15 +33,16 @@
 			margin: auto;
 		}
 		header{
-			height: 100%;
+			height: 110%;
 		}
 		section{
-			height: 100%;
+			height: 110%;
 			padding-top: 220px;
 			position: relative;
 		}
 		section:before{
 			content: '';
+			font-family: arial;
 			background-color: #1dd1a1;
 			background-size: cover;
 			height: 150px;
@@ -43,12 +50,39 @@
 			display: block;
 			position: absolute;
 			top: 0;
+			font-size: 12vw;
+			text-transform: uppercase;
+			color: black;
+			text-align: center;
+			overflow: hidden;
+			line-height: 160px;
+		}
+		#who:before{
+			background-color: #feca57;
+			content: 'Who is this ?';
+		}
+		#what:before{
+			background-color: #54a0ff;
+			content: 'Low what ?';
+		}
+		#why:before{
+			background-color: #5f27cd;
+			content: 'But why ?';
+		}
+		#how:before{
+			background-color: #54a0ff;
+			content: 'How it works ?';
+		}
+		#contact:before{
+			background-color: #ff9ff3;
+			content: 'Contact';
 		}
 		h1{
 			text-align: center;
 			text-transform: uppercase;
 			font-size: 15px;
 			color: #00d2d3;
+			width: 100%;
 		}
 		h1 span{
 			display: none;
@@ -60,7 +94,7 @@
 			position: fixed;
 			top: 150px;
 			width: 100%;
-			background: rgba(0,0,0,0.8);
+			background: rgba(0,0,0,0.6);
 		}
 		nav ul{
 			padding: 0;
@@ -69,16 +103,18 @@
 			flex-direction: row;
 			justify-content: center;
 			flex-wrap: wrap;
+			margin: 5px 0 15px 0;
 		}
 		nav ul li{
-			border-bottom: 1px solid white;
-			padding: 2px;
+			padding: 0;
 			margin: 0 10px;
 		}
 		nav li a{
 			display: block;
-			border-bottom: 1px solid gray;
 			padding: 3px;
+		}
+		nav li a:hover{
+			border-bottom: 1px solid #48dbfb;
 		}
 		a{
 			text-decoration: none;
@@ -104,18 +140,70 @@
 			height: 100%;
 			margin-right: 5px;
 		}
+		.team{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding-top: 3vw;
+		}
+		.person{
+			text-align: center;
+			background-color: transparent;
+			width: 30vw;
+			position: relative;
+			margin: 5px;
+			padding: 2vw 5px 5px 5px;
+		}
+		.ico{
+			position: absolute;
+			top:-3vw;
+			left: 50%;
+			margin-left: -2.5vw;
+			font-size: 4vw;
+			border-radius: 50%;
+			background-color: transparent;
+			width: 5vw;
+			height: 5vw;
+			line-height: 5vw;
+			overflow: hidden;
+		}
 		.center{
 			text-align: center;
 		}
 		.rounded{
 			border-radius: 50%;
 		}
+		.mt100{
+			margin-top: 100px;
+		}
+		#maltLogoPicto{
+			fill: #ff4967;
+		}
 		@media screen and (max-width: 508px) {
-		  	section {
-			    padding-top: 230px;
+			.ico{
+				top:-10vw;
+				margin-left: -10vw;
+				font-size: 15vw;
+				width: 20vw;
+				height: 20vw;
+				line-height: 20vw;
 			}
-			section:before{
-				height: 160px;
+			.person{
+				padding-top: 10vw;
+				width: 100%;
+			}
+			header > pre{
+				color: #1dd1a1;
+				width: 350px;
+				margin: auto;
+				font-size: 9px;
+			}
+		  	section {
+			    padding-top: 250px;
+			}
+			h1 {
+			    position: absolute;
+			    font-size: 5vw;
 			}
 		}
 	</style>
@@ -132,56 +220,107 @@
 888 Y88..88P Y88b 888 d88P        Y88b 888 d88P Y8b.     888 d88P 
 888  "Y88P"   "Y8888888P"          "Y8888888P"   "Y8888  88888P"
                                                        by plopcom</pre>
-	<h1><span>Low-web,</span>vers un web sobre et résilient</h1>		
+	<h1><span>Low-web,</span>vers un web sobre et résilient</h1>
+	<pre class="mt100">    .                  .-.    .  _   *     _   .
+           *          /   \     ((       _/ \       *    .
+         _    .   .--'\/\_ \     `      /    \  *    ___
+     *  / \_    _/ ^      \/\'__        /\/\  /\  __/   \ *
+       /    \  /    .'   _/  /  \  *' /    \/  \/ .`'\_/\   .
+  .   /\/\  /\/ :' __  ^/  ^/    `--./.'  ^  `-.\ _    _:\ _
+     /    \/  \  _/  \-' __/.' ^ _   \_   .'\   _/ \ .  __/ \
+   /\  .-   `. \/     \ / -.   _/ \ -. `_/   \ /    `._/  ^  \
+  /  `-.__ ^   / .-'.--'    . /    `--./ .-'  `-.  `-. `.  -  `.
+@/        `.  / /      `-.   /  .-'   / .   .'   \    \  \  .-  \%</pre>
 	</header>
 	<section id="who">
 		<h2>Qui sommes nous ?</h2>
 		<p>Low-web est une spin off de Plopcom, une micro entreprise de développement web basée dans les Alpes</p>
 		<h2>L'équipe</h2>
-		<p>Gaëtan Janssens - père - 33ans - Ingénieur web depuis 2009</p>
+		<div class="team">
+			<div class="person">
+				<div class="ico">🦉</div>
+				<div class="bio">
+					<b>Gaëtan Janssens</b><br>33ans<br>Ingénieur web depuis 2009
+				</div>
+			</div>
+		</div>
+		
 	</section>
 	<section id="what">
 		<h2>Nos services</h2>
-		<p>Réalisation de sites ultra leger, static, rapides, accessible, ouvert et beau.</p>
+		<p>Réalisation de sites ultra leger, static, rapides, accessibles, ouverts et beau.</p>
 	</section>
 	<section id="why">
 		<h2>Pourquoi</h2>
-		<p>Imaginer le web de demain, l'internet d'une nouvelle civilisation</p>
+		<p>Prendre au sérieu l'hypothèse d'un <a href="https://www.youtube.com/watch?v=kLzNPEjHHb8">effondrement</a> de civilisation ce n'est pas se résigner mais s'y préparer. <br>
+			Quel informatique et quelle place pour les nouvelles technologie ? Quel rôle aura l'internet dans nos vies transformées ?
+		</p>
+		<p>Low-web vous propose d'imaginer ce web de demain, l'internet d'une nouvelle civilisation.</p>
 	</section>
-	<section id="values">
+	<section id="how">
+		<h2>Nos outils</h2>
+		<p>Formés en permaculture depuis 2016, nous utilisons les principes de cette méthode de design pour concevoir des systèmes informatiques sobres et résilients, adaptés aux enjeux de notre siecle</p>
 		<h2>Nos valeurs</h2>
-		<p></p>
 		<div class="tagcloud">
-			#ethique #neutralité #decroissance #resilience #écologie #economie #opensource
+			#ethique #neutralité #decroissance #resilience #écologie #sobriété #opensource #permaculture #lessismore
 		</div>
 	</section>
 	<section id="contact">
-		<h2>Contact</h2>
+		<h2>Et si on travaillait ensemble ?</h2>
 		<ul>
 			<li>
-				<a href="https://www.malt.fr/profile/gaetanjanssens"><img class="rounded" src="https://www.malt.fr/favicon.ico" alt="malt"/><span>Page freelance <i>malt</i></span></a>  
+				<a href="https://www.malt.fr/profile/gaetanjanssens">
+					<svg id="maltLogoPicto" class="main-header-logo__picto standard" xmlns="http://www.w3.org/2000/svg" width="30" height="92.3" viewBox="0 0 92.3 92.3">
+        <path d="M79 14.2c-4.6-4.5-12-4.5-16.4 0L13.4 62.8C9 67.3 9 74.6 13.4 79c4.4 4.5 11.7 4.5 16.2 0l49-48.6c4.7-4.6 4.7-12 .3-16.4"></path>
+        <path d="M57.6 12.3C57.6 4.5 52.6 0 46 0 40 0 34.7 6 34.6 12.3L46 24l11.6-11.7z"></path>
+        <path d="M30.5 13.8c-2-2.2-5-3.5-8-3.5-3.2 0-6 1-8.3 3.2-4.6 4.4-4.7 11.7-.4 16.3l1.7 1.8h24.3l4-3.8-13.3-14z"></path>
+        <path d="M11.6 35c-3 0-6 1.3-8.2 3.4-2.2 2.2-3.4 5-3.4 8 0 3.2.6 11.7 13.2 11.7l23-22.8H11.7z"></path>
+        <path d="M34.6 80c0 7.8 5 12.3 11.5 12.3 6.4 0 11.6-6 11.7-12.3L46 68.3 34.6 80z"></path>
+        <path d="M78.4 63.7L76.7 62l-24.3-.2-4 4L62 79.5c4.4 4.6 11.7 4.7 16.3.4 4.6-4.4 4.7-11.7.4-16.3"></path>
+        <path d="M79.2 35.3L56 58.3h24.6c3.2 0 6-1 8.2-3.2 2.2-2 3.4-5 3.4-8 0-6.4-5-11.8-13-11.7"></path>
+    </svg>
+    <span>Page freelance sur <b><i>malt</i></b></span></a>  
 			</li>
+			<li><a href="mailto:l&#111;w@p%6c%6fp%63%6fm.%66r"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<g>
+		<polygon style="fill:#C6CBCB;" points="0,28.912 331.169,448.395 360.607,348.517 		"/>
+		<polygon style="fill:#D672AD;" points="231.47,234.064 208.737,293.313 331.169,448.395 360.607,348.517 		"/>
+		<polygon style="fill:#D1D5D5;" points="331.169,448.395 300.681,373.749 0,28.912 267.039,395.827 		"/>
+		<polygon style="fill:#E2E5E7;" points="300.681,373.749 128.262,483.087 0,28.912 		"/>
+		<polygon style="fill:#E2E5E7;" points="360.607,348.517 0,28.912 512,282.283 		"/>
+		<polygon style="fill:#EA8EBC;" points="182.646,238.382 123.753,467.124 128.262,483.087 300.845,373.618 		"/>
+		<polygon style="fill:#EA8EBC;" points="490.927,271.856 231.47,234.064 360.482,348.94 512,282.283 		"/>
+		<polygon style="fill:#D672AD;" points="182.646,238.382 123.753,467.124 191.301,248.285 		"/>
+		<polygon style="fill:#D672AD;" points="231.47,234.064 242.976,244.31 490.927,271.856 		"/>
+		<polygon style="fill:#C6CBCB;" points="300.845,373.618 266.658,395.304 292.821,416.96 		"/>
+	</g>
+	<polygon style="fill:#EA8EBC;" points="12.714,73.934 23.006,55.296 0,28.912 	"/>
+	<polygon style="fill:#EA8EBC;" points="27.91,53.648 51.141,54.22 0,28.912 	"/>
+</g>
+</svg><span>Contactez nous par <b><i>email</i></b></span></a></li>
 		</ul>
 	</section>
 	<div class="center">
-			<small>Cette page de 8ko, sans javascript sans trackeurs, sans cookie et sans aucune dépendance est hebergée sur une simple box internet</small>
+			<small>Cette page de moins de 10ko, sans javascript, sans trackeur, sans cookie, sans image et sans aucune dépendance est hebergée sur une simple box internet, alimentée, le jour, par le <a href=" https://enlighten.enphaseenergy.com/public/systems/8SHh504368 ">🌞</a></small>
 	</div>
 	<nav>
 		<ul>
 			<li>
-				<a href="#top">🏠</a>
+				<a href="#top">&#8683;</a>
 			</li>
 			<li>
 				<a href="#who">Qui ?</a>
 			</li>
 			<li>
-				<a href="#why">Quoi ?</a>
+				<a href="#what">Quoi ?</a>
 			</li>
 			<li>
-				<a href="#what">Pourquoi ?</a>
+				<a href="#why">Pourquoi ?</a>
 			</li>
 			<li>
-				<a href="#values">Comment ?</a>
+				<a href="#how">Comment ?</a>
 			</li>
 			<li>
 				<a href="#contact">Contact</a>
