@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Low-web</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<style type="text/css">
+		/*https://flatuicolors.com/palette/ca*/
+		html,body{
+			height: 100%;
+			padding: 0; margin: 0;
+		}
+		body{
+			padding: 10px 0;
+			background: #222f3e;
+			color: #c8d6e5;
+		}
+		h1,h2{
+			font-family: "DejaVu Sans Mono", "Lucida Console", monospace;
+		}
+		p,div{
+			font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
+		}
+		section > *{
+			width: 100%;
+			padding: 5px;
+			max-width: 1080px;
+			margin: auto;
+		}
+		header{
+			height: 100%;
+		}
+		section{
+			height: 100%;
+			padding-top: 220px;
+			position: relative;
+		}
+		section:before{
+			content: '';
+			background-color: #1dd1a1;
+			background-size: cover;
+			height: 150px;
+			width: 100%;
+			display: block;
+			position: absolute;
+			top: 0;
+		}
+		h1{
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 15px;
+			color: #00d2d3;
+		}
+		h1 span{
+			display: none;
+		}
+		h2{
+			color: #01a3a4;
+		}
+		nav{
+			position: fixed;
+			top: 150px;
+			width: 100%;
+			background: rgba(0,0,0,0.8);
+		}
+		nav ul{
+			padding: 0;
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		nav ul li{
+			border-bottom: 1px solid white;
+			padding: 2px;
+			margin: 0 10px;
+		}
+		nav li a{
+			display: block;
+			border-bottom: 1px solid gray;
+			padding: 3px;
+		}
+		a{
+			text-decoration: none;
+			color: #48dbfb;
+		}
+		header > pre{
+			color: #1dd1a1;
+			width: 350px;
+			margin: auto;
+			font-size: 9px;
+		}
+		ul{
+			list-style: none;
+		}
+		ul li,ul li a{
+			display: block;
+			height: 30px;
+			line-height: 30px;
+		}
+		ul li a span,ul li a img,ul li a svg{
+			display: block;
+			float: left;
+			height: 100%;
+			margin-right: 5px;
+		}
+		.center{
+			text-align: center;
+		}
+		.rounded{
+			border-radius: 50%;
+		}
+		@media screen and (max-width: 508px) {
+		  	section {
+			    padding-top: 230px;
+			}
+			section:before{
+				height: 160px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+	<!--	http://www.patorjk.com/software/taag/#p=display&f=Colossal&t=low-web -->
+<pre>888                                                      888      
+888                                                      888      
+888                                                      888      
+888  .d88b.  888  888  888        888  888  888  .d88b.  88888b.  
+888 d88""88b 888  888  888        888  888  888 d8P  Y8b 888 "88b 
+888 888  888 888  888  888 888888 888  888  888 88888888 888  888 
+888 Y88..88P Y88b 888 d88P        Y88b 888 d88P Y8b.     888 d88P 
+888  "Y88P"   "Y8888888P"          "Y8888888P"   "Y8888  88888P"
+                                                       by plopcom</pre>
+	<h1><span>Low-web,</span>vers un web sobre et résilient</h1>		
+	</header>
+	<section id="who">
+		<h2>Qui sommes nous ?</h2>
+		<p>Low-web est une spin off de Plopcom, une micro entreprise de développement web basée dans les Alpes</p>
+		<h2>L'équipe</h2>
+		<p>Gaëtan Janssens - père - 33ans - Ingénieur web depuis 2009</p>
+	</section>
+	<section id="what">
+		<h2>Nos services</h2>
+		<p>Réalisation de sites ultra leger, static, rapides, accessible, ouvert et beau.</p>
+	</section>
+	<section id="why">
+		<h2>Pourquoi</h2>
+		<p>Imaginer le web de demain, l'internet d'une nouvelle civilisation</p>
+	</section>
+	<section id="values">
+		<h2>Nos valeurs</h2>
+		<p></p>
+		<div class="tagcloud">
+			#ethique #neutralité #decroissance #resilience #écologie #economie #opensource
+		</div>
+	</section>
+	<section id="contact">
+		<h2>Contact</h2>
+		<ul>
+			<li>
+				<a href="https://www.malt.fr/profile/gaetanjanssens"><img class="rounded" src="https://www.malt.fr/favicon.ico" alt="malt"/><span>Page freelance <i>malt</i></span></a>  
+			</li>
+		</ul>
+	</section>
+	<div class="center">
+			<small>Cette page de 8ko, sans javascript sans trackeurs, sans cookie et sans aucune dépendance est hebergée sur une simple box internet</small>
+	</div>
+	<nav>
+		<ul>
+			<li>
+				<a href="#top">🏠</a>
+			</li>
+			<li>
+				<a href="#who">Qui ?</a>
+			</li>
+			<li>
+				<a href="#why">Quoi ?</a>
+			</li>
+			<li>
+				<a href="#what">Pourquoi ?</a>
+			</li>
+			<li>
+				<a href="#values">Comment ?</a>
+			</li>
+			<li>
+				<a href="#contact">Contact</a>
+			</li>
+		</ul>
+	</nav>
+</body>
+</html>
