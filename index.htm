@@ -12,7 +12,7 @@
 			padding: 0; margin: 0;
 		}
 		body{
-			padding: 10px 0;
+			padding: 0 0 10px 0;
 			background: #222f3e;
 			color: #c8d6e5;
 		}
@@ -74,20 +74,13 @@
 		#how:before{
 			background-color: #54a0ff;
 			content: 'How it works ?';
-			font-size: 11vw;
+			font-size: 11.5vw;
 		}
 		#contact:before{
 			background-color: #ff9ff3;
 			content: 'Contact';
 		}
 		h1{
-			text-align: center;
-			text-transform: uppercase;
-			font-size: 15px;
-			color: #00d2d3;
-			width: 100%;
-		}
-		h1 span{
 			display: none;
 		}
 		h2{
@@ -169,10 +162,21 @@
 		a:hover{
 			color: white;
 		}
-		header > pre{
+		header > .logo{
+			margin: auto;
+			margin-top: 0px;
+			font-size: 0.7vw;
+			text-align: center;
+		}
+		header > .logo span.subtitle {
+			color: #48dbfb;
+			text-transform: uppercase;
+		}
+		header > pre {
 			color: #1dd1a1;
 			width: 350px;
 			margin: auto;
+			margin-top: auto;
 			font-size: 9px;
 		}
 		ul{
@@ -236,7 +240,25 @@
 		.line-list li{
 			margin: 2px;
 		}
+		.d-none{
+			display: none;
+		}
+		.d-block{
+			display: block;
+		}
+		@media screen and (max-width: 1072px) {
+			header > .logo{
+				margin: 15px;
+				font-size: 1vw;
+			}
+		}
 		@media screen and (max-width: 508px) {
+			.d-sm-none{
+				display: none;
+			}
+			.d-sm-block{
+				display: block;
+			}
 			nav ul li{
 				font-size: 20px;
 			}
@@ -252,6 +274,11 @@
 				padding-top: 10vw;
 				width: 100%;
 			}
+			header > .logo{
+				margin: 50px;
+				font-size: 1.4vw;
+			}
+		
 			header > pre{
 				color: #1dd1a1;
 				width: 280px;
@@ -276,15 +303,16 @@
 <body>
 	<header>
 	<!--	http://www.patorjk.com/software/taag/#p=display&f=Colossal&t=low-web -->
-<pre>888                                                      888      
-888                                                      888      
-888                                                      888      
-888  .d88b.  888  888  888        888  888  888  .d88b.  88888b.  
-888 d88""88b 888  888  888        888  888  888 d8P  Y8b 888 "88b 
-888 888  888 888  888  888 888888 888  888  888 88888888 888  888 
-888 Y88..88P Y88b 888 d88P        Y88b 888 d88P Y8b.     888 d88P 
-888  "Y88P"   "Y8888888P"          "Y8888888P"   "Y8888  88888P"
-                                                       by plopcom</pre>
+<div class="logo">╔═══════════════════════════════════════════════════════════════════╗<br>
+║░███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░███░░░░░░║<br>
+║░███░░▄████▄░░███░░███░░███░░░░░░░░███░░███░░███░░▄████▄░░██████▄░░║<br>
+║░███░▐██▀▀██▌░███░░███░░███░░░░░░░░███░░███░░███░▐██░░██▌░███░▀██▌░║<br>
+║░███░███░░███░███░░███░░███░██████░███░░███░░███░████████░███░░███░║<br>
+║░███░▐██▄▄██▌░▐██▌░███░▐██▌░░░░░░░░▐██▌░███░▐██▌░▐██▄░░░░░███▄▄██▌░║<br>
+║░███░░▀████▀░░░▀█████████▀░░░░░░░░░░▀█████████▀░░░▀████▀░░█████▀░░░║<br>
+<span class="d-sm-none">╚═════════════════════<span class="subtitle">  vers un web sobre & résilient  </span>═════════════ by plopcom ═╝</span>
+<span class="d-sm-block d-none">╚═══════════════════════════════════════════════════════════════════╝</span>
+</div>
 	<h1><span>Low-web,</span>vers un web sobre et résilient</h1>
 	<pre class="mt100">    .                  .-.    .  _   *     _   .
            *          /   \     ((       _/ \       *    .
@@ -313,7 +341,7 @@
 	</section>
 	<section id="what">
 		<h2>Nos services</h2>
-		<p>Réalisation de sites ultra leger, static, rapides, accessibles, ouverts et beau.</p>
+		<p>Réalisation de sites ultra-legers, statics, rapides, accessibles, ouverts et beaux.</p>
 		<h2>Nos compétences</h2>
 		<ul class="line-list">
 			<li><a href="https://gohugo.io/">HUGO</a></li>
@@ -326,7 +354,7 @@
 	<section id="why">
 		<h2>Pourquoi ? 🤔</h2>
 		<p>Prendre au sérieux l'hypothèse d'un <a href="https://www.youtube.com/watch?v=kLzNPEjHHb8">effondrement</a> de civilisation ce n'est pas se résigner mais s'y préparer. <br>
-			Quel informatique et quelle place pour les nouvelles technologie ? Quel rôle aura l'internet dans nos vies transformées ?
+			Quel informatique et quelle place pour les nouvelles technologies ? Quel rôle aura l'internet dans nos vies transformées ?
 		</p>
 		<p><b>Low-web</b> vous propose d'imaginer ce web de demain, l'internet d'une nouvelle civilisation.</p>
 	</section>
