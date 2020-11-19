@@ -20,6 +20,6 @@ jobs:
       - name: rsync
         uses: contention/rsync-deployments@v1.0.0
         with:
-          args: "-avzr --delete root@srv.plopcom.fr:/srv/myapp/public/htdocs/"
+          args: "-avzr --delete root@srv.plopcom.fr:/var/www/low.plopcom.fr"
         env: 
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
