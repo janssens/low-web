@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: rsync
-      - uses: contention/rsync-deployments@v1.0.0
+        uses: contention/rsync-deployments@v1.0.0
         with:
           args: "-avzr --delete root@srv.plopcom.fr:/srv/myapp/public/htdocs/"
         env: 
