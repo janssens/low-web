@@ -12,11 +12,11 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   deploy:
     name: deploy on staging
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2.3.4
       - name: rsync
         uses: contention/rsync-deployments@v1.0.0
         with:
