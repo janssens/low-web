@@ -13,8 +13,8 @@
 		}
 		body{
 			padding: 0 0 10px 0;
-			background: #222f3e;
-			color: #c8d6e5;
+			background: #0a1218;
+			color: #f0f0f0;
 		}
 		h1,h2{
 			/*font-family: "DejaVu Sans Mono", "Lucida Console", monospace;*/
@@ -23,17 +23,29 @@
 		p,div{
 			font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
 		}
+		p{
+			line-height: 1.3rem;
+			padding: 3rem 2rem;
+		}
 		*{
 			box-sizing: border-box;
 		}
 		section > *{
 			width: 100%;
-			padding: 5px;
 			max-width: 1080px;
 			margin: auto;
 		}
 		header{
 			min-height: 110%;
+			background: #cccccc;
+			color: #555555;
+		}
+		.def{
+			font-family: sans-serif;
+			font-size: 1.8rem;
+			text-align: center;
+			color: #222222;
+			padding: 5rem;
 		}
 		section{
 			min-height: 110%;
@@ -76,6 +88,15 @@
 			content: 'How it works ?';
 			font-size: 11.5vw;
 		}
+		#contact ul li{
+			line-height: 30px;
+			height: 30px;
+			margin-bottom: 1rem;
+		}
+		#contact ul li a{
+			line-height: 30px;
+			height: 30px;
+		}
 		#contact:before{
 			background-color: #ff9ff3;
 			content: 'Contact';
@@ -84,13 +105,14 @@
 			display: none;
 		}
 		h2{
-			color: #01a3a4;
+			color: #BFE6E7;
+			font-size: 3rem;
 		}
 		nav{
 			position: fixed;
 			top: 150px;
 			width: 100%;
-			background: rgba(0,0,0,0.6);
+			background: #212121;
 		}
 		nav ul{
 			padding: 0;
@@ -102,25 +124,24 @@
 			margin: 5px 0;
 		}
 		nav ul li{
-			font-family: arial;
+			font-family: arial, sans-serif;
 			padding: 0;
-			margin: 0 10px;
-			font-size: 15px;
-			padding: 0;
+			margin: 10px;
+			font-size: 17px;
 		}
 		nav li a{
 			display: block;
 			padding: 0;
 			position: relative;
 			line-height: 20px;
+			color: #cccccc;
 		}
 		nav li a::before, nav li  a::after {
 		    position: absolute;
 		    left: .9rem;
 		    right: .9rem;
 		    height: 2px;
-		    background: 
-		    #cccccc !important;
+		    background: #cccccc !important;
 		    content: '';
 		    opacity: 0;
 		    -webkit-transition: opacity 0.3s,-webkit-transform 0.3s;
@@ -162,30 +183,21 @@
 		a:hover{
 			color: white;
 		}
+
 		header > .logo{
-			margin: auto;
-			margin-top: 0px;
-			font-size: 0.7vw;
 			text-align: center;
+			margin: 0 auto 15px auto;
+			font-size: 14px;
 		}
 		header > .logo span.subtitle {
-			color: #48dbfb;
+			color: #222222;
 			text-transform: uppercase;
-		}
-		header > pre {
-			color: #1dd1a1;
-			width: 350px;
-			margin: auto;
-			margin-top: auto;
-			font-size: 9px;
 		}
 		ul{
 			list-style: none;
 		}
 		ul li,ul li a{
 			display: block;
-			height: 30px;
-			line-height: 30px;
 		}
 		ul li a span,ul li a img,ul li a svg{
 			display: block;
@@ -246,13 +258,15 @@
 		.d-block{
 			display: block;
 		}
-		@media screen and (max-width: 1072px) {
-			header > .logo{
-				margin: 15px;
-				font-size: 1vw;
-			}
+		.tagcloud{
+			text-transform: uppercase;
+			font-weight: bold;
+			max-width: 500px;
+			font-size: 1.5rem;
+			line-height: 2rem;
+			text-align: center;
 		}
-		@media screen and (max-width: 508px) {
+		@media screen and (max-width: 700px) {
 			.d-sm-none{
 				display: none;
 			}
@@ -261,6 +275,11 @@
 			}
 			nav ul li{
 				font-size: 20px;
+			}
+			h2{
+				padding: 0 0.5rem;
+				font-size: 2rem;
+				text-align: center;
 			}
 			.ico{
 				top:-10vw;
@@ -275,10 +294,13 @@
 				width: 100%;
 			}
 			header > .logo{
-				margin: 50px;
-				font-size: 1.4vw;
+				padding-top: 50px;
+				font-size: 1vw;
 			}
-		
+			.def{
+				padding: 1rem;
+				font-size: 1rem;
+			}
 			header > pre{
 				color: #1dd1a1;
 				width: 280px;
@@ -314,36 +336,38 @@
 <span class="d-sm-block d-none">╚═══════════════════════════════════════════════════════════════════╝</span>
 </div>
 	<h1><span>Low-web,</span>vers un web sobre et résilient</h1>
-	<pre class="mt100">    .                  .-.    .  _   *     _   .
-           *          /   \     ((       _/ \       *    .
-         _    .   .--'\/\_ \     `      /    \  *    ___
-     *  / \_    _/ ^      \/\'__        /\/\  /\  __/   \ *
-       /    \  /    .'   _/  /  \  *' /    \/  \/ .`'\_/\   .
-  .   /\/\  /\/ :' __  ^/  ^/    `--./.'  ^  `-.\ _    _:\ _
-     /    \/  \  _/  \-' __/.' ^ _   \_   .'\   _/ \ .  __/ \
-   /\  .-   `. \/     \ / -.   _/ \ -. `_/   \ /    `._/  ^  \
-  /  `-.__ ^   / .-'.--'    . /    `--./ .-'  `-.  `-. `.  -  `.
-@/        `.  / /      `-.   /  .-'   / .   .'   \    \  \  .-  \%</pre>
+	<div class="mt100 def">
+		Concervoir du web "<b>low-tech</b>" <br>
+		c'est user d'un maximum d'<b>intelligence</b> pour
+		<br> inventer des systèmes <b>sobres</b>, <b>simples</b> et <b>durables</b>
+		<br> qui <b>maximisent leurs effets</b> en <b>minimisant l'énergie</b> qu'ils requirent. <br><br>
+		C'est de la <b>permaculture appliquée</b> à l'ecosystème web.
+	</div>
 	</header>
 	<section id="who">
-		<h2>Qui sommes nous ?</h2>
-		<p>Low-web est une spin off de Plopcom, une micro entreprise de développement web basée dans les Alpes</p>
-		<h2>L'équipe</h2>
+		<h2>👾  Mais Low-web, qui est-ce ?</h2>
+		<p>Low-web est une fausse "spin off" de Plopcom, une micro entreprise de développement web basée dans les Alpes</p>
+		<h2>🫂 L'équipe (moi)</h2>
 		<div class="team">
 			<div class="person">
-				<div class="ico">🦉</div>
+				<div class="ico">⛑</div>
 				<div class="bio">
-					<b>Gaëtan Janssens</b><br>33ans<br>Ingénieur web depuis 2009
+					<b>Gaëtan Janssens</b><br>35ans<br>Ingénieur web depuis 2009 <br>
+					<a href="http://gaetan.janssens.free.fr">@gaetan.janssens</a>
 				</div>
 			</div>
 		</div>
 		
 	</section>
 	<section id="what">
-		<h2>Nos services</h2>
-		<p>Réalisation de sites ultra-legers, statics, rapides, accessibles, ouverts et beaux.</p>
-		<h2>Nos compétences</h2>
-		<ul class="line-list">
+		<h2>📜  Mes services</h2>
+			<ul style="padding: 5rem;">
+				<li>Réalisation de sites ultra-legers, statics, rapides, accessibles, ouverts et beaux.</li>
+				<li>Système informatique low-tech pour vos fermes et systèmes autonomes (météo, serre, panier, ...)</li>
+				<li>Developpements sur mesure, demandez moi !</li>
+			</ul>
+		<h2>💪 Quelques-une de mes compétences web</h2>
+		<ul class="" style="padding: 5rem;">
 			<li><a href="https://gohugo.io/">HUGO</a></li>
 			<li><a href="https://getgrav.org">GRAV</a></li>
 			<li><a href="https://www.raspberrypi.org/">RASPBERRY</a></li>
@@ -352,22 +376,23 @@
 		</ul>
 	</section>
 	<section id="why">
-		<h2>Pourquoi ? 🤔</h2>
-		<p>Prendre au sérieux l'hypothèse d'un <a href="https://www.youtube.com/watch?v=kLzNPEjHHb8">effondrement</a> de civilisation ce n'est pas se résigner mais s'y préparer. <br>
-			Quel informatique et quelle place pour les nouvelles technologies ? Quel rôle aura l'internet dans nos vies transformées ?
+		<h2>🤔  Mais pourquoi ?</h2>
+		<p>	A l'époque de <a href="https://www.vie-publique.fr/parole-dexpert/271086-terre-climat-quest-ce-que-lanthropocene-ere-geologique">L’Anthropocène</a>, quelle informatique et quelle place pour les nouvelles technologies demain ? Quel rôle aura l'internet dans nos vies bientot transformées ?
 		</p>
-		<p><b>Low-web</b> vous propose d'imaginer ce web de demain, l'internet d'une nouvelle civilisation.</p>
+		<p style="font-size: 1.8rem; line-height: 2rem;"><b>Low-web</b> vous propose d'imaginer ce web de demain, l'<b>internet d'une nouvelle civilisation</b>.</p>
 	</section>
 	<section id="how">
-		<h2>Nos outils</h2>
+		<h2>🔧  Nos outils</h2>
 		<p>Formés en permaculture depuis 2016, nous utilisons les principes de cette méthode de design pour concevoir des systèmes informatiques sobres et résilients, adaptés aux enjeux de notre siecle.</p>
-		<h2>Nos valeurs</h2>
+		<h2>❤️ Nos valeurs</h2>
 		<div class="tagcloud">
 			#ethique #neutralité #decroissance #resilience #écologie #sobriété #opensource #permaculture #lessismore
 		</div>
 	</section>
 	<section id="contact">
-		<h2>Et si on travaillait ensemble ?</h2>
+		<h2>👋  Et si on travaillait ensemble ?</h2>
+		<br>
+		<br>
 		<ul>
 			<li>
 				<a href="https://www.malt.fr/profile/gaetanjanssens">
