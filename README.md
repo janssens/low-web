@@ -1,2 +1,5 @@
 # low-web
-low.plopcom.fr sources
+
+sources for :
+- [plopcom.fr](plopcom.fr)
+- [permalgorithme.fr](permalgorithme.fr)
