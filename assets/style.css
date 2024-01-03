@@ -67,7 +67,8 @@ nav[role=menu] ul li{
     align-items: center;
 }
 nav[role=menu] ul li img{
-    width: clamp(10px,10vw,40px);;
+    width: clamp(10px,10vw,40px);
+    height: auto;
     margin: 0 0.3rem;
 }
 body > img {
