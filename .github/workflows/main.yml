@@ -17,9 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.4
-      - name: rsync
-        uses: contention/rsync-deployments@v1.0.0
+      - uses: contention/rsync-deployments@v2.0.0
         with:
-          args: "-avzr --delete ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_DIR }}"
-        env: 
+          FLAGS: -avzr --delete
+          EXCLUDES: --exclude .git --exclude .github
+          USER: ${{ secrets.DEPLOY_USER }}
+          HOST: ${{ secrets.DEPLOY_HOST }}
+          LOCALPATH: /
+          REMOTEPATH: ${{ secrets.DEPLOY_DIR }}
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
