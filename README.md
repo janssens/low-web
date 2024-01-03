@@ -1,5 +1,5 @@
 # low-web
 
 sources for :
-- [plopcom.fr](plopcom.fr)
-- [permalgorithme.fr](permalgorithme.fr)
+- [https://plopcom.fr](plopcom.fr)
+- [https://permalgorithme.fr](permalgorithme.fr)
