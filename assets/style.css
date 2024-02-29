@@ -16,6 +16,11 @@ body{
         color: #f0f0f0;
     }
 }
+.logo{
+    @media (prefers-color-scheme: dark) {
+        filter: invert(100%);
+    }
+}
 a {
     color: black;
     @media (prefers-color-scheme: dark) {
